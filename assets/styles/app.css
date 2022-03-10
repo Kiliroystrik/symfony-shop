@@ -1,3 +1,260 @@
-body {
-    background-color: lightgray;
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+  /*****************************************************RESET******************************************************************/
+  box-sizing: border-box;
+  margin: 0;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+menu,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+p,
+a,
+h4,
+button,
+span {
+  font-size: 1.6rem;
+  color: #1b1b1b;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.872rem;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: large;
+  border-radius: 2rem;
+  color: #1b1b1b;
+}
+
+a:hover {
+  color: #990d35;
+}
+
+/*****************************************************RESET******************************************************************/
+/********************************ALL COLORS***********************************************************************/
+/*
+Purple Heart	#5F27CD	Primary
+Bleached Cedar	#1f1420	Text
+SHIP COVE	    #7299B9	light accent
+HIPPIE PINK	    #B5415A	Dark accent
+BLEACHED CEDAR	#1F1420	Dark shades
+CARARRA         #F5F6F2 Light shades
+/*
+
+
+
+/*******************************************************************************************************************/
+header {
+  background-color: #f5f6f2;
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: #dcddd7 solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  margin: 0 2rem;
+  font-weight: bold;
+}
+header nav div.avatar {
+  border: #990d35 2px solid;
+  border-radius: 2.5rem;
+  padding: 0.4rem 0.7rem;
+}
+header nav div.avatar img {
+  width: 30px;
+}
+header nav div.avatar p {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: #f5f6f2;
+  display: flex;
+  justify-content: center;
+}
+main div.container {
+  max-width: 1920px;
+  width: 100%;
+}
+main div.container div.cover {
+  height: 60vh;
+  background: url(../../public/img/cover.jpg);
+  background-position: bottom;
+}
+main div.container section {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+main div.container section table {
+  background-color: #fff;
+}
+main div.container section table thead tr {
+  margin-bottom: 2rem;
+}
+main div.container section table thead tr th {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main div.container section table tbody tr {
+  background-color: #424242;
+}
+main div.container section table tbody tr td {
+  font-size: 2rem;
+  color: #7299b9;
+}
+main div.container section table tbody tr td a.add {
+  background-color: #7299b9;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin: 0 1rem;
+}
+main div.container section table tbody tr td a.add:hover {
+  background-color: #00e6a1;
+}
+main div.container section table tbody tr td a.remove {
+  background-color: #7299b9;
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+  margin: 0 0.6rem;
+}
+main div.container section table tbody tr td a.remove:hover {
+  background-color: #e60000;
+}
+main div.container section table tbody tr td a.delete {
+  background-color: #990d35;
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+  margin: 0 0.6rem;
+}
+main div.container section table tbody tr td a.delete:hover {
+  background-color: white;
+}
+main div.container section h2 {
+  margin: 7rem 0;
+  color: #7299b9;
+  font-weight: bold;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  text-decoration: overline;
+}
+main div.container section article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+main div.container section article div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main div.container section article div div.card {
+  background-color: #fff;
+  width: 25rem;
+  height: 40rem;
+  padding: 1.5%;
+  margin: 2rem;
+  border: solid 2px #fff;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main div.container section article div div.card h3 {
+  color: #7299b9;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+}
+main div.container section article div div.card img {
+  width: 100%;
+}
+main div.container section article div div.card div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+main div.container section article div div.card div p {
+  color: #1b1b1b;
+  font-size: large;
+  font-weight: 700;
+}
+main div.container section article div div.card div form .btn {
+  border: #f5f6f2;
+  border-radius: 2rem;
+  color: #7299b9;
+  background: #f5f6f2;
+  padding: 1.5rem;
+  font-weight: 700;
+}
+main div.container section article div div.card div form .btn:hover {
+  background-color: #424242;
+}
+main div.container section article div div.card:hover {
+  border: solid 2px #7299b9;
+}
+
+footer {
+  background-color: #f5f6f2;
+  display: flex;
+  border-top: #dcddd7 solid 1px;
+}
+footer nav {
+  margin: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}/*# sourceMappingURL=app.css.map */
