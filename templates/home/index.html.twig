@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+
+{% block main %}
+	<div class="cover"></div>
+	<section>
+		<h1>Détaillez vos sushis</h1>
+		{% for category in categories %}
+			<article>
+				<h2>{{ category.name }}</h2>
+				<div>
+
+					{% for product in category.products %}
+						<div class="card">
+							<img src="{{ asset('images/' ~ product.image ) }} " alt="product-image">
+							<h3>{{ product.name }}</h3>
+							<div>
+								<p>{{ product.price }}€</p>
+								<form>
+									<a id="add" data-id="{{product.id}}" class="btn btnadd" href="{{ path('add-cart', {id: product.id})}}">Ajouter</a>
+								</form>
+
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</article>
+		{% endfor %}
+
+
+	</section>
+{% endblock %}

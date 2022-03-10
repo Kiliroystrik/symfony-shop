@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CartController!
+{% endblock %}
+
+{% block main %}
+	<section>
+		<h1>Votre panier</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Image</th>
+					<th>Produit</th>
+					<th>Quantité</th>
+					<th>Prix</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for array in dataCart %}
+					<tr>
+						<td>
+							<img style="width:10rem;" src="{{ asset('images/' ~ array.product.image ) }} " alt="product-image">
+						</td>
+						<td>{{ array.product.name }}</td>
+						<td>
+							<a class="remove" href="{{ path("remove-cart", {id: array.product.id}) }}">-</a>
+							{{ array.quantity }}<a class="add" href="{{ path("add-cart", {id: array.product.id}) }}">+</a>
+							<a class="delete" href="{{ path("delete-cart", {id: array.product.id}) }}">x</a>
+						</td>
+						<td>{{ array.product.price }}€</td>
+					</tr>
+				{% else %}
+					<p>Votre panier est vide</p>
+				{% endfor %}
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						{{total}}€
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+{% endblock %}
